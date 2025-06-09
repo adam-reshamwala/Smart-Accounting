@@ -61,6 +61,25 @@
 
   </div>
 </section>
+<!-- Whatsapp Form Section -->
+<section class="smart-whatsapp-form">
+  <h2>Quick WhatsApp Enquiry</h2>
+  <form onsubmit="return sendWhatsAppMessage()">
+    <input type="text" id="name" placeholder="Your Name" required />
+    
+    <select id="service" required>
+      <option value="">Select a Service</option>
+      <option value="GST Filing">GST Filing</option>
+      <option value="Income Tax Return">Income Tax Return</option>
+      <option value="Bookkeeping">Bookkeeping</option>
+      <option value="Other">Other</option>
+    </select>
+
+    <textarea id="message" placeholder="Type your message..." required></textarea>
+
+    <button type="submit">Send via WhatsApp</button>
+  </form>
+</section>
 <!-- Testimonials Section -->
 <section class="testimonials" id="testimonials">
   <h2>What Our Clients Say</h2>
@@ -97,24 +116,6 @@
     <p><strong>Email:</strong> smartaccounting@email.com</p>
     <p><strong>Location:</strong> Indore, MP</p>
   </div>
-</section>
-<section class="smart-whatsapp-form">
-  <h2>Quick WhatsApp Enquiry</h2>
-  <form onsubmit="return sendWhatsAppMessage()">
-    <input type="text" id="name" placeholder="Your Name" required />
-    
-    <select id="service" required>
-      <option value="">Select a Service</option>
-      <option value="GST Filing">GST Filing</option>
-      <option value="Income Tax Return">Income Tax Return</option>
-      <option value="Bookkeeping">Bookkeeping</option>
-      <option value="Other">Other</option>
-    </select>
-
-    <textarea id="message" placeholder="Type your message..." required></textarea>
-
-    <button type="submit">Send via WhatsApp</button>
-  </form>
 </section>
 <footer class="footer">
   <p>© 2025 SmartAccounting. Built with ❤️ by Adam Reshamwala.</p>
