@@ -206,8 +206,14 @@ nav a {
 }
 .smart-whatsapp-form {
   background: #f1f1f1;
-  padding: 30px;
+  padding: 30px 15px;
   text-align: center;
+}
+
+.smart-whatsapp-form form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .smart-whatsapp-form input,
@@ -215,19 +221,26 @@ nav a {
 .smart-whatsapp-form textarea {
   width: 90%;
   max-width: 400px;
-  margin: 10px 0;
+  margin: 8px 0;
   padding: 10px;
   font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.smart-whatsapp-form textarea {
+  height: 100px;
 }
 
 .smart-whatsapp-form button {
+  margin-top: 10px;
   background: #25d366;
   color: white;
   border: none;
   padding: 12px 25px;
   font-size: 16px;
   cursor: pointer;
-  border-radius: 5px;
+  border-radius: 6px;
 }
 
 .smart-whatsapp-form button:hover {
