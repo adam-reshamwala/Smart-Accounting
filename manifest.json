@@ -1,7 +1,7 @@
 {
   "name": "SmartAccounting",
   "short_name": "SmartAcct",
-  "start_url": "/",
+  "start_url": "/Smart-Accounting/",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#002244",
