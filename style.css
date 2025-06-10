@@ -1,95 +1,84 @@
-/* Global Reset */
+/* --- GENERAL --- */
 body {
-  font-family: sans-serif;
   margin: 0;
-  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #fff;
+  color: #333;
 }
 
-/* Header Section */
-header {
-  background: #003366;
-  color: white;
-  padding: 10px 20px;
-  text-align: center;
+h1, h2, h3 {
+  margin-bottom: 10px;
 }
 
-/* Navigation Bar */
+p {
+  margin-top: 0;
+}
+
+/* --- NAVBAR --- */
 nav {
-  background: #005599;
   display: flex;
-  justify-content: center;
-  gap: 20px;
-  padding: 10px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #002244;
 }
 
 nav a {
   color: white;
+  margin-left: 20px;
   text-decoration: none;
-  font-weight: bold;
+  font-weight: 500;
 }
 
-/* Hero Section */
+/* --- HERO SECTION --- */
 .hero {
-  padding: 40px 20px;
   text-align: center;
-  background: #f4f4f4;
+  padding: 60px 20px;
 }
 
 .hero h1 {
-  color: #003366;
+  font-size: 36px;
+  color: #002244;
 }
 
-/* Buttons inside Hero */
-.buttons {
-  margin-top: 20px;
+.hero p {
+  font-size: 18px;
+  color: #555;
 }
 
-.buttons a {
-  display: inline-block;
-  margin: 10px;
-  padding: 10px 20px;
-  background: #003366;
-  color: white;
-  border-radius: 5px;
-  text-decoration: none;
-}
-/* Services Section */
-.services {
-  padding: 40px 20px;
-  background: #ffffff;
-  text-align: center;
-}
-
-.services h2 {
-  color: #003366;
-  margin-bottom: 30px;
-}
-
-.service-list {
+/* --- FEATURE BOX SECTION --- */
+.feature-section {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
   justify-content: center;
+  padding: 40px 20px;
+  gap: 20px;
 }
 
-.service-card {
-  background: #f2f2f2;
-  padding: 20px;
+.feature-box {
+  background: #f5f5f5;
+  padding: 30px;
   border-radius: 10px;
-  width: 280px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  text-align: left;
+  width: 300px;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease;
 }
 
-.service-card h3 {
-  color: #005599;
-  margin-bottom: 10px;
+.feature-box:hover {
+  transform: translateY(-4px);
 }
 
-.service-card p {
-  color: #333;
-  font-size: 14px;
+.feature-box.services {
+  background: #e0f7fa;
+  color: #00796b;
 }
+
+.feature-box.problem {
+  background: #fce4ec;
+  color: #c2185b;
+}
+
 /* Testimonials Section */
 .testimonials {
   background: #f9f9f9;
@@ -203,46 +192,4 @@ nav a {
   padding: 15px 0;
   text-align: center;
   font-size: 14px;
-}
-.smart-whatsapp-form {
-  background: #f1f1f1;
-  padding: 30px 15px;
-  text-align: center;
-}
-
-.smart-whatsapp-form form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.smart-whatsapp-form input,
-.smart-whatsapp-form select,
-.smart-whatsapp-form textarea {
-  width: 90%;
-  max-width: 400px;
-  margin: 8px 0;
-  padding: 10px;
-  font-size: 16px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-}
-
-.smart-whatsapp-form textarea {
-  height: 100px;
-}
-
-.smart-whatsapp-form button {
-  margin-top: 10px;
-  background: #25d366;
-  color: white;
-  border: none;
-  padding: 12px 25px;
-  font-size: 16px;
-  cursor: pointer;
-  border-radius: 6px;
-}
-
-.smart-whatsapp-form button:hover {
-  background: #1ebc5b;
 }
