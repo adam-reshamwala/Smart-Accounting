@@ -29,6 +29,11 @@ nav a {
   text-decoration: none;
   font-weight: 500;
 }
+nav div {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+}
 
 /* --- HERO SECTION --- */
 .hero {
