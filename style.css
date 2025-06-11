@@ -19,24 +19,36 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap; /* ✅ Allows wrapping on small screens */
   padding: 20px;
   background-color: #002244;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+nav div {
+  display: flex;
+  flex-wrap: wrap;       /* ✅ Wrap links if needed */
+  gap: 24px;
+  align-items: center;
 }
 
 nav a {
   color: white;
-  margin-left: 20px;
+  margin-left: 0; /* ❌ Don't add fixed left margin — we already use gap */
   text-decoration: none;
   font-weight: 500;
+  white-space: nowrap; /* ✅ Prevent breaking link into 2 lines */
 }
-nav div {
-  display: flex;
-  gap: 24px;
-  align-items: center;
-}
+
 nav a:hover {
   text-decoration: underline;
   color: #00e6e6;
+}
+
+/* ✅ Prevent entire page from scrolling horizontally */
+body {
+  overflow-x: hidden;
 }
 
 /* --- HERO SECTION --- */
