@@ -18,19 +18,26 @@
 </head>
 <body>
   <header>
-    <nav class="navbar">
+<nav class="navbar">
   <div class="nav-container">
-    <div class="logo">SmartAccounting</div>
+    <!-- LEFT -->
+    <div class="nav-left">
+      <div class="hamburger" onclick="toggleMenu()">☰</div>
+    </div>
 
-    <div class="nav-links" id="navLinks">
+    <!-- CENTER -->
+    <div class="nav-center">
+      <div class="logo">SmartAccounting</div>
+    </div>
+
+    <!-- RIGHT -->
+    <div class="nav-right" id="navLinks">
       <a href="services.html">Services</a>
       <a href="post-problem.html">Post Problem</a>
       <a href="#contact">Contact</a>
     </div>
-
-    <div class="hamburger" onclick="toggleMenu()">☰</div>
   </div>
-      </nav>
+</nav>
   </header>
 
   <section class="hero">
@@ -90,6 +97,6 @@
 <footer class="footer">
   <p>© 2025 SmartAccounting. Built with ❤️ by Adam Reshamwala.</p>
 </footer>
-<script src="script.js"></script>
+<script src="script.js" defer></script>
 </body>
 </html>

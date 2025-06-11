@@ -14,7 +14,7 @@ h1, h2, h3 {
 p {
   margin-top: 0;
 }
-/* --- ADVANCED NAVBAR --- */
+/* --- ADVANCED 3-ZONE NAVBAR --- */
 .navbar {
   background-color: #002244;
   position: sticky;
@@ -26,59 +26,67 @@ p {
 
 .nav-container {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
   padding: 16px 24px;
   max-width: 1200px;
   margin: 0 auto;
+  flex-wrap: wrap;
 }
 
+.nav-left,
+.nav-center,
+.nav-right {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* LOGO */
 .logo {
   color: white;
   font-size: 24px;
   font-weight: bold;
   text-align: center;
-  flex-grow: 1;
 }
 
-.nav-links {
-  display: flex;
-  gap: 24px;
-}
-
-.nav-links a {
+/* DESKTOP MENU */
+.nav-right a {
   color: white;
   text-decoration: none;
   font-weight: 500;
+  margin: 0 12px;
   transition: color 0.2s;
 }
 
-.nav-links a:hover {
+.nav-right a:hover {
   color: #00e6e6;
 }
 
+/* HAMBURGER BUTTON (MOBILE ONLY) */
 .hamburger {
-  display: none;
   font-size: 26px;
   color: white;
   cursor: pointer;
+  display: none;
 }
 
-/* --- Responsive --- */
+/* --- RESPONSIVE --- */
 @media (max-width: 768px) {
-  .nav-links {
+  .nav-right {
     display: none;
     position: absolute;
     top: 64px;
     left: 0;
-    background: #002244;
     width: 100%;
+    background-color: #002244;
     flex-direction: column;
     align-items: center;
     padding: 10px 0;
   }
 
-  .nav-links.active {
+  .nav-right.active {
     display: flex;
   }
 
@@ -86,9 +94,11 @@ p {
     display: block;
   }
 
-  .logo {
-    text-align: center;
-    flex-grow: 1;
+  .nav-left,
+  .nav-center,
+  .nav-right {
+    flex: 1 0 100%;
+    justify-content: center;
   }
 }
 /* --- HERO SECTION --- */
