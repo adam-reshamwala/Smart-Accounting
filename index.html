@@ -17,16 +17,20 @@
 </script>
 </head>
 <body>
-<body>
   <header>
-    <nav>
-      <div style="color: white; font-size: 24px; font-weight: bold;">SmartAccounting</div>
-      <div>
-        <a href="services.html">Services</a>
-        <a href="post-problem.html">Post Problem</a>
-        <a href="#contact">Contact</a>
-      </div>
-    </nav>
+    <nav class="navbar">
+  <div class="nav-container">
+    <div class="logo">SmartAccounting</div>
+
+    <div class="nav-links" id="navLinks">
+      <a href="services.html">Services</a>
+      <a href="post-problem.html">Post Problem</a>
+      <a href="#contact">Contact</a>
+    </div>
+
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+  </div>
+      </nav>
   </header>
 
   <section class="hero">
@@ -46,8 +50,6 @@
     </div>
   </section>
 
-  <!-- Keep your testimonial and footer as is -->
-</body>
 <!-- Testimonials Section -->
 <section class="testimonials" id="testimonials">
   <h2>What Our Clients Say</h2>

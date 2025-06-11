@@ -4,6 +4,7 @@ body {
   font-family: 'Segoe UI', sans-serif;
   background-color: #fff;
   color: #333;
+  overflow-x: hidden;
 }
 
 h1, h2, h3 {
@@ -13,44 +14,83 @@ h1, h2, h3 {
 p {
   margin-top: 0;
 }
+/* --- ADVANCED NAVBAR --- */
+.navbar {
+  background-color: #002244;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  width: 100%;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
 
-/* --- NAVBAR --- */
-nav {
+.nav-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap; /* ✅ Allows wrapping on small screens */
-  padding: 20px;
-  background-color: #002244;
-  max-width: 100%;
-  box-sizing: border-box;
+  padding: 16px 24px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-nav div {
-  display: flex;
-  flex-wrap: wrap;       /* ✅ Wrap links if needed */
-  gap: 24px;
-  align-items: center;
-}
-
-nav a {
+.logo {
   color: white;
-  margin-left: 0; /* ❌ Don't add fixed left margin — we already use gap */
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  flex-grow: 1;
+}
+
+.nav-links {
+  display: flex;
+  gap: 24px;
+}
+
+.nav-links a {
+  color: white;
   text-decoration: none;
   font-weight: 500;
-  white-space: nowrap; /* ✅ Prevent breaking link into 2 lines */
+  transition: color 0.2s;
 }
 
-nav a:hover {
-  text-decoration: underline;
+.nav-links a:hover {
   color: #00e6e6;
 }
 
-/* ✅ Prevent entire page from scrolling horizontally */
-body {
-  overflow-x: hidden;
+.hamburger {
+  display: none;
+  font-size: 26px;
+  color: white;
+  cursor: pointer;
 }
 
+/* --- Responsive --- */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 64px;
+    left: 0;
+    background: #002244;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 0;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .logo {
+    text-align: center;
+    flex-grow: 1;
+  }
+}
 /* --- HERO SECTION --- */
 .hero {
   text-align: center;

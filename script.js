@@ -12,3 +12,6 @@ function sendWhatsAppMessage() {
 
   return false;
 }
+function toggleMenu() {
+  document.getElementById('navLinks').classList.toggle('active');
+}
