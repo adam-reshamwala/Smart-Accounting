@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Panel - SmartAccounting</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- AOS Animate on Scroll CSS -->
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="container">
+      <div class="brand">SmartAccounting Admin</div>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="post-problem.html">Submit Test</a>
+        <a href="#">Logout</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="admin">
+    <div class="container">
+      <h2 class="section-title">Submitted Problems (Test Data)</h2>
+
+      <div class="lead-list">
+        <div class="lead-card">
+          <h4>Priya Sinha</h4>
+          <p><strong>Email:</strong> priya@example.com</p>
+          <p><strong>Phone:</strong> +91 9876543210</p>
+          <p><strong>Business:</strong> Freelancer</p>
+          <p><strong>Problem:</strong> Needs help filing quarterly GST returns for two states.</p>
+        </div>
+
+        <div class="lead-card">
+          <h4>Kunal Mehta</h4>
+          <p><strong>Email:</strong> kunal@example.com</p>
+          <p><strong>Phone:</strong> +91 9123456780</p>
+          <p><strong>Business:</strong> SaaS Startup</p>
+          <p><strong>Problem:</strong> Wants clean monthly accounts for fundraising report.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="script.js" defer></script>
+  <!-- AOS JS -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 700,
+    offset: 100,
+    once: true,
+  });
+</script>
+</body>
+</html>

@@ -15,3 +15,23 @@ document.getElementById("problemFormPage")?.addEventListener("submit", function 
       alert("Something went wrong. Please try again later.");
     });
 });
+// FAQ toggle
+document.querySelectorAll(".faq-question").forEach((question) => {
+  question.addEventListener("click", () => {
+    const item = question.parentElement;
+    item.classList.toggle("active");
+  });
+});
+function openVideo(url) {
+  const modal = document.getElementById("modalOverlay");
+  const iframe = document.getElementById("tutorialVideo");
+  iframe.src = url + "?autoplay=1";
+  modal.style.display = "flex";
+}
+
+function closeModal() {
+  const modal = document.getElementById("modalOverlay");
+  const iframe = document.getElementById("tutorialVideo");
+  iframe.src = "";
+  modal.style.display = "none";
+}

@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>SmartAccounting</title>
   <link rel="stylesheet" href="style.css" />
+  <!-- AOS Animate on Scroll CSS -->
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
 
@@ -16,6 +18,7 @@
         <a href="#">Services</a>
         <a href="#">Post a Problem</a>
         <a href="#">Contact</a>
+        <a href="terms.html">Terms & Privacy</a>
       </nav>
     </div>
   </header>
@@ -95,6 +98,32 @@
     </div>
   </div>
 </section>
+<!-- === FAQ SECTION === -->
+<section class="faq">
+  <div class="container">
+    <h2 class="section-title">Frequently Asked Questions</h2>
+
+    <div class="faq-item">
+      <h3 class="faq-question">How long does it take to file GST?</h3>
+      <p class="faq-answer">Typically within 24–48 hours, once all documents are received and verified.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3 class="faq-question">Do I need to register to post a problem?</h3>
+      <p class="faq-answer">No, you can post anonymously or with just a phone number or email.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3 class="faq-question">Will my data be kept private?</h3>
+      <p class="faq-answer">Absolutely. We do not share your details with anyone without your consent.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3 class="faq-question">Can I speak to a CA directly?</h3>
+      <p class="faq-answer">Yes. Based on your problem, we connect you with the right professional.</p>
+    </div>
+  </div>
+</section>
 <!-- === FOOTER === -->
 <footer class="footer">
   <div class="container footer-grid">
@@ -121,6 +150,23 @@
     <p>© 2025 SmartAccounting. All rights reserved.</p>
   </div>
 </footer>
+<!-- === WHATSAPP CHAT BUTTON === -->
+<a href="https://wa.me/919876543210?text=Hello%2C%20I%20need%20help%20with%20SmartAccounting." 
+   class="whatsapp-float" 
+   target="_blank" 
+   title="Chat with us on WhatsApp">
+  <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" />
+</a>
+
   <script src="script.js" defer></script>
+  <!-- AOS JS -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 700,
+    offset: 100,
+    once: true,
+  });
+</script>
 </body>
 </html>

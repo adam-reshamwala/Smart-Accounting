@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Login - SmartAccounting</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <section class="login-section">
+    <div class="container">
+      <h2 class="section-title">Admin Login</h2>
+      <form id="loginForm">
+        <input type="password" id="adminPass" placeholder="Enter Admin Password" required />
+        <button type="submit">Login</button>
+        <p class="error-msg" id="loginError" style="display:none;">Incorrect password. Try again.</p>
+      </form>
+    </div>
+  </section>
+
+  <script>
+    document.getElementById("loginForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+      const pass = document.getElementById("adminPass").value;
+      const correctPass = "admin123"; // ✅ Set your own secure password here
+      if (pass === correctPass) {
+        window.location.href = "admin.html";
+      } else {
+        document.getElementById("loginError").style.display = "block";
+      }
+    });
+  </script>
+</body>
+</html>
