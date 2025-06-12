@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Post a Problem - SmartAccounting</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+<script>
+  (function() {
+    emailjs.init("JqIQoS7rcEm8QCa5Q"); // Your Public Key
+  })();
+</script>
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="container">
+      <div class="brand">SmartAccounting</div>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="#">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="problem-page">
+    <div class="container">
+      <h2 class="section-title">Post a Problem</h2>
+      <p class="section-subtext">Your issue will be reviewed confidentially and responded to quickly.</p>
+
+   <form id="problemFormPage">
+  <input type="text" name="from_name" placeholder="Your Name (Optional)" />
+  <input type="email" name="from_email" placeholder="Email Address" required />
+  <input type="tel" name="phone" placeholder="Phone Number" required />
+  <input type="text" name="business_type" placeholder="Business Type (e.g. Retailer, Freelancer)" />
+  <textarea name="message" placeholder="Describe Your Problem..." rows="5" required></textarea>
+  <button type="submit">Submit Problem</button>
+  <p class="confidential-note">🔒 We respect your privacy. Nothing is shared.</p>
+</form>
+    </div>
+  </section>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
