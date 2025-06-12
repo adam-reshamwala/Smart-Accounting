@@ -35,3 +35,7 @@ function closeModal() {
   iframe.src = "";
   modal.style.display = "none";
 }
+function toggleMenu() {
+  const nav = document.getElementById("navLinks");
+  nav.classList.toggle("show");
+}
