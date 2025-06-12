@@ -1,8 +1,11 @@
-document.getElementById("problemForm").addEventListener("submit", function (e) {
+
+// Inline Post Problem Form (Homepage)
+document.getElementById("problemForm")?.addEventListener("submit", function (e) {
   e.preventDefault();
   alert("Problem submitted successfully! (This is just a demo)");
 });
-// Handle separate Post Problem Page form
+
+// Post Problem Page Form (with EmailJS)
 document.getElementById("problemFormPage")?.addEventListener("submit", function (e) {
   e.preventDefault();
 
@@ -15,13 +18,16 @@ document.getElementById("problemFormPage")?.addEventListener("submit", function 
       alert("Something went wrong. Please try again later.");
     });
 });
-// FAQ toggle
+
+// FAQ Toggle
 document.querySelectorAll(".faq-question").forEach((question) => {
   question.addEventListener("click", () => {
     const item = question.parentElement;
     item.classList.toggle("active");
   });
 });
+
+// Open tutorial video
 function openVideo(url) {
   const modal = document.getElementById("modalOverlay");
   const iframe = document.getElementById("tutorialVideo");
@@ -29,13 +35,33 @@ function openVideo(url) {
   modal.style.display = "flex";
 }
 
+// Close video modal
 function closeModal() {
   const modal = document.getElementById("modalOverlay");
   const iframe = document.getElementById("tutorialVideo");
   iframe.src = "";
   modal.style.display = "none";
 }
+// Toggle mobile nav visibility
 function toggleMenu() {
   const nav = document.getElementById("navLinks");
   nav.classList.toggle("show");
 }
+
+// Close menu when a nav link is clicked
+document.addEventListener("DOMContentLoaded", () => {
+  const navLinks = document.querySelectorAll(".nav-links a");
+  const navMenu = document.getElementById("navLinks");
+
+  navLinks.forEach(link => {
+    link.addEventListener("click", () => {
+      navMenu.classList.remove("show");
+    });
+  });
+});
+
+// ✅ Close menu on scroll (new)
+window.addEventListener("scroll", () => {
+  const nav = document.getElementById("navLinks");
+  nav.classList.remove("show");
+});
