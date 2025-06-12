@@ -3,170 +3,150 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>SmartAccounting</title>
+  <meta name="description" content="SmartAccounting simplifies GST filing, ITR, and accounting for Indian businesses. Post your problem or explore services.">
+  <meta name="keywords" content="GST, ITR, Indian accounting, tax filing, SmartAccounting, CA support">
+  <meta name="author" content="SmartAccounting Team">
+  <title>SmartAccounting- Home</title>
   <link rel="stylesheet" href="style.css" />
   <!-- AOS Animate on Scroll CSS -->
-<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="icon" href="assets/favicon.png" type="image/png">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XDW6R0QFDD"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-XDW6R0QFDD');
+  </script>
 </head>
 <body>
-
   <!-- === NAVBAR === -->
   <header class="navbar">
     <div class="container">
-      <div class="brand">SmartAccounting</div>
+      <div class="brand" data-aos="zoom-in">SmartAccounting</div>
       <nav class="nav-links">
-        <a href="#">Services</a>
-        <a href="#">Post a Problem</a>
-        <a href="#">Contact</a>
+        <a href="services.html">Services</a>
+        <a href="post-problem.html">Post a Problem</a>
+        <a href="about.html">Contact</a>
         <a href="terms.html">Terms & Privacy</a>
       </nav>
     </div>
   </header>
-
+<main>
   <!-- === HERO SECTION === -->
-  <section class="hero">
+  <section class="hero" data-aos="fade-up">
     <div class="container hero-grid">
       <div class="hero-text">
         <h1>Effortless GST, ITR & Accounting</h1>
-        <p>Manage your business compliance with India’s smartest accounting platform.</p>
-        <a href="#" class="cta-btn">Explore Services</a>
+        <p>Manage your business compliance with Our Smartest accounting platform.</p>
+        <a href="services.html" class="cta-btn">Explore Services</a>
       </div>
-      <div class="hero-image">
-        <img src="assets/images/hero-image.png" alt="Accounting Illustration" />
+      <div class="hero-video-wrapper">
+        <video autoplay muted loop playsinline aria-label="SmartAccounting overview video showing features and services">
+         <source src="header.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
       </div>
     </div>
   </section>
-<!-- === SERVICES SECTION === -->
-<section class="services">
-  <div class="container">
-    <h2 class="section-title">What We Offer</h2>
-    <div class="service-grid">
-      <div class="service-card">
-        <div class="service-icon">📄</div>
-        <h3>GST Return Filing</h3>
-        <p>Monthly and quarterly GST filing made effortless, accurate, and on time.</p>
-        <a href="#" class="card-btn">Learn More</a>
-      </div>
-      <div class="service-card">
-        <div class="service-icon">💰</div>
-        <h3>ITR Filing</h3>
-        <p>Simple, guided income tax return filing for salaried, freelancers, and businesses.</p>
-        <a href="#" class="card-btn">Learn More</a>
-      </div>
-      <div class="service-card">
-        <div class="service-icon">📊</div>
-        <h3>Business Accounting</h3>
-        <p>Track income, expenses, and performance with managed bookkeeping and reports.</p>
-        <a href="#" class="card-btn">Learn More</a>
+  <!-- === POST A PROBLEM SECTION === -->
+  <section class="cta-problem" data-aos="zoom-in">
+    <div class="container">
+    <h2>Facing a business or tax issue?</h2>
+    <p>Let our experts help you quickly & confidentially.</p>
+    <a href="post-problem.html" class="card-btn">Post Your Problem</a>
+    </div>
+  </section>
+  <!-- === TESTIMONIALS SECTION === -->
+  <section class="testimonials" data-aos="fade-up">
+    <div class="container">
+      <h2 class="section-title">What Our Clients Say</h2>
+      <div class="testimonial-grid">
+        <div class="testimonial-card">
+          <p class="quote">“SmartAccounting handled my GST and ITR so smoothly. No confusion, just results.”</p>
+          <h4>— Ramesh Agarwal, Small Business Owner</h4>
+        </div>
+        <div class="testimonial-card">
+          <p class="quote">“I posted a problem and they called me in 15 minutes. Outstanding support!”</p>
+          <h4>— Priya Sinha, Freelancer</h4>
+        </div>
+        <div class="testimonial-card">
+          <p class="quote">“We outsourced all monthly accounts. Saved time, got clean reports, highly recommend.”</p>
+          <h4>— Kunal Mehta, Startup Founder</h4>
+        </div>
       </div>
     </div>
-  </div>
-</section>
-<!-- === POST A PROBLEM SECTION === -->
-<section class="problem-form">
-  <div class="container">
-    <h2 class="section-title">Post a Problem (Confidential)</h2>
-    <p class="section-subtext">Tell us what’s troubling your business — and we’ll guide you.</p>
-    <form id="problemForm">
-      <input type="text" placeholder="Your Name (Optional)" />
-      <input type="email" placeholder="Email Address" required />
-      <input type="tel" placeholder="Phone Number" required />
-      <input type="text" placeholder="Business Type (e.g. Trader, Freelancer)" />
-      <textarea placeholder="Describe Your Problem..." rows="5" required></textarea>
-      <button type="submit">Submit Problem</button>
-      <p class="confidential-note">🔒 Your information is 100% private.</p>
-    </form>
-  </div>
-</section>
-<!-- === TESTIMONIALS SECTION === -->
-<section class="testimonials">
-  <div class="container">
-    <h2 class="section-title">What Our Clients Say</h2>
-    <div class="testimonial-grid">
-      <div class="testimonial-card">
-        <p class="quote">“SmartAccounting handled my GST and ITR so smoothly. No confusion, just results.”</p>
-        <h4>— Ramesh Agarwal, Small Business Owner</h4>
-      </div>
-      <div class="testimonial-card">
-        <p class="quote">“I posted a problem and they called me in 15 minutes. Outstanding support!”</p>
-        <h4>— Priya Sinha, Freelancer</h4>
-      </div>
-      <div class="testimonial-card">
-        <p class="quote">“We outsourced all monthly accounts. Saved time, got clean reports, highly recommend.”</p>
-        <h4>— Kunal Mehta, Startup Founder</h4>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- === FAQ SECTION === -->
-<section class="faq">
-  <div class="container">
-    <h2 class="section-title">Frequently Asked Questions</h2>
+  </section>
+  <!-- === FAQ SECTION === -->
+  <section class="faq" data-aos="fade-up">
+    <div class="container">
+      <h2 class="section-title">Frequently Asked Questions</h2>
 
-    <div class="faq-item">
-      <h3 class="faq-question">How long does it take to file GST?</h3>
-      <p class="faq-answer">Typically within 24–48 hours, once all documents are received and verified.</p>
+      <div class="faq-item" data-aos="fade-up">
+        <h3 class="faq-question">How long does it take to file GST?</h3>
+        <p class="faq-answer">Typically within 24–48 hours, once all documents are received and verified.</p>
+      </div>
+      <div class="faq-item" data-aos="fade-up">
+        <h3 class="faq-question">Do I need to register to post a problem?</h3>
+        <p class="faq-answer">No, you can post anonymously or with just a phone number or email.</p>
+      </div>
+      <div class="faq-item" data-aos="fade-up">
+        <h3 class="faq-question">Will my data be kept private?</h3>
+        <p class="faq-answer">Absolutely. We do not share your details with anyone without your consent.</p>
+      </div>
+      <div class="faq-item" data-aos="fade-up">
+        <h3 class="faq-question">Can I speak to a CA directly?</h3>
+        <p class="faq-answer">Yes. Based on your problem, we connect you with the right professional.</p>
+      </div>
     </div>
-
-    <div class="faq-item">
-      <h3 class="faq-question">Do I need to register to post a problem?</h3>
-      <p class="faq-answer">No, you can post anonymously or with just a phone number or email.</p>
+  </section>
+</main>
+  <!-- === FOOTER === -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-column">
+        <h3>SmartAccounting</h3>
+        <p>Your partner in compliance, taxation, and bookkeeping.</p>
+      </div>
+      <div class="footer-column">
+        <h4>Quick Links</h4>
+          <ul>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="post-problem.html">Post Problem</a></li>
+            <li><a href="about.html">Contact</a></li>
+            <li><a href="terms.html">Terms</a></li>
+          </ul>
+      </div>
+      <div class="footer-column">
+        <h4>Contact Us</h4>
+        <p>Email: support@smartaccounting.in</p>
+        <p>Phone: +91 98765 43210</p>
+        <p><a href="https://wa.me/919876543210" target="_blank">Chat on WhatsApp</a></p>
+      </div>
     </div>
-
-    <div class="faq-item">
-      <h3 class="faq-question">Will my data be kept private?</h3>
-      <p class="faq-answer">Absolutely. We do not share your details with anyone without your consent.</p>
+    <div class="footer-bottom">
+      <p>© 2025 SmartAccounting. All rights reserved.</p>
     </div>
-
-    <div class="faq-item">
-      <h3 class="faq-question">Can I speak to a CA directly?</h3>
-      <p class="faq-answer">Yes. Based on your problem, we connect you with the right professional.</p>
-    </div>
-  </div>
-</section>
-<!-- === FOOTER === -->
-<footer class="footer">
-  <div class="container footer-grid">
-    <div class="footer-column">
-      <h3>SmartAccounting</h3>
-      <p>Your partner in compliance, taxation, and bookkeeping.</p>
-    </div>
-    <div class="footer-column">
-      <h4>Quick Links</h4>
-      <ul>
-        <li><a href="#">Services</a></li>
-        <li><a href="#">Post Problem</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
-    </div>
-    <div class="footer-column">
-      <h4>Contact Us</h4>
-      <p>Email: support@smartaccounting.in</p>
-      <p>Phone: +91 98765 43210</p>
-      <p><a href="https://wa.me/919876543210" target="_blank">Chat on WhatsApp</a></p>
-    </div>
-  </div>
-  <div class="footer-bottom">
-    <p>© 2025 SmartAccounting. All rights reserved.</p>
-  </div>
-</footer>
-<!-- === WHATSAPP CHAT BUTTON === -->
-<a href="https://wa.me/919876543210?text=Hello%2C%20I%20need%20help%20with%20SmartAccounting." 
+  </footer>
+  <!-- === WHATSAPP CHAT BUTTON === -->
+  <a href="https://wa.me/918839824832?text=Hello%2C%20I%20need%20help%20with%20SmartAccounting." 
    class="whatsapp-float" 
    target="_blank" 
    title="Chat with us on WhatsApp">
   <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" />
-</a>
+  </a>
 
   <script src="script.js" defer></script>
   <!-- AOS JS -->
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>
-  AOS.init({
-    duration: 700,
-    offset: 100,
-    once: true,
-  });
-</script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 700,
+      offset: 120,
+      once: true,
+    });
+  </script>
 </body>
 </html>
