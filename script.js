@@ -30,32 +30,30 @@ document.querySelectorAll(".faq-question").forEach((question) => {
 function openVideo(url) {
   const modal = document.getElementById("modalOverlay");
   const iframe = document.getElementById("tutorialVideo");
+
   iframe.src = url + "?autoplay=1";
-  modal.classList.add("show");
+  modal.style.display = "flex";
+
+  // Wait a tiny bit before applying fade-in class
+  setTimeout(() => {
+    modal.classList.add("show");
+  }, 10);
 }
 
 function closeModal() {
   const modal = document.getElementById("modalOverlay");
   const iframe = document.getElementById("tutorialVideo");
+
   iframe.src = ""; // Stop the video
   modal.classList.remove("show");
 
-  // Delay hiding modal after fade-out animation
+  // Hide modal after transition
   setTimeout(() => {
     modal.style.display = "none";
-  }, 300); // Match the CSS transition
+  }, 300); // Match CSS transition
 }
 
-// Show modal display properly after .show is added
-document.addEventListener("DOMContentLoaded", () => {
-  const modal = document.getElementById("modalOverlay");
-  const observer = new MutationObserver(() => {
-    if (modal.classList.contains("show")) {
-      modal.style.display = "flex";
-    }
-  });
-  observer.observe(modal, { attributes: true });
-});
+
 
 // ✅ Click outside the video to close
 document.addEventListener("click", function (e) {
