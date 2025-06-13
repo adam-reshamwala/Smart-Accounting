@@ -27,21 +27,44 @@ document.querySelectorAll(".faq-question").forEach((question) => {
   });
 });
 
-// Open tutorial video
 function openVideo(url) {
   const modal = document.getElementById("modalOverlay");
   const iframe = document.getElementById("tutorialVideo");
   iframe.src = url + "?autoplay=1";
-  modal.style.display = "flex";
+  modal.classList.add("show");
 }
 
-// Close video modal
 function closeModal() {
   const modal = document.getElementById("modalOverlay");
   const iframe = document.getElementById("tutorialVideo");
-  iframe.src = "";
-  modal.style.display = "none";
+  iframe.src = ""; // Stop the video
+  modal.classList.remove("show");
+
+  // Delay hiding modal after fade-out animation
+  setTimeout(() => {
+    modal.style.display = "none";
+  }, 300); // Match the CSS transition
 }
+
+// Show modal display properly after .show is added
+document.addEventListener("DOMContentLoaded", () => {
+  const modal = document.getElementById("modalOverlay");
+  const observer = new MutationObserver(() => {
+    if (modal.classList.contains("show")) {
+      modal.style.display = "flex";
+    }
+  });
+  observer.observe(modal, { attributes: true });
+});
+
+// ✅ Click outside the video to close
+document.addEventListener("click", function (e) {
+  const modal = document.getElementById("modalOverlay");
+  const box = document.querySelector(".modal-box");
+  if (modal.classList.contains("show") && !box.contains(e.target)) {
+    closeModal();
+  }
+});
 // Toggle mobile nav visibility
 function toggleMenu() {
   const nav = document.getElementById("navLinks");
