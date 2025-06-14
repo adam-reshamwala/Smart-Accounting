@@ -10,13 +10,24 @@
 </head>
 <body>
 
+  <!-- === NAVBAR === -->
   <header class="navbar">
-    <div class="container">
-      <div class="brand">SmartAccounting Admin</div>
-      <nav class="nav-links">
-        <a href="index.html">Home</a>
-        <a href="post-problem.html">Submit Test</a>
-        <a href="#">Logout</a>
+    <div class="container nav-container">
+      <div class="brand" data-aos="zoom-in">SmartAccounting</div>
+  
+      <!-- Hamburger Toggle Button -->
+      <div class="hamburger" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+  
+      <!-- Nav Links -->
+      <nav class="nav-links" id="navLinks">
+        <a href="home.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="post-problem.html">Post Problem</a>
+        <a href="about.html">About</a>
       </nav>
     </div>
   </header>

@@ -10,11 +10,21 @@
 </head>
 <body>
 
+  <!-- === NAVBAR === -->
   <header class="navbar">
-    <div class="container">
-      <div class="brand">SmartAccounting</div>
-      <nav class="nav-links">
-        <a href="index.html">Home</a>
+    <div class="container nav-container">
+      <div class="brand" data-aos="zoom-in">SmartAccounting</div>
+  
+      <!-- Hamburger Toggle Button -->
+      <div class="hamburger" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+  
+      <!-- Nav Links -->
+      <nav class="nav-links" id="navLinks">
+        <a href="home.html">Home</a>
         <a href="services.html">Services</a>
         <a href="post-problem.html">Post Problem</a>
         <a href="about.html">About</a>
@@ -25,27 +35,22 @@
   <section class="legal">
     <div class="container">
       <h2 class="section-title">Terms & Privacy Policy</h2>
-
       <div class="legal-block">
         <h3>1. Data Collection</h3>
         <p>We collect user data only to respond to inquiries. We never sell or share your information with third parties.</p>
       </div>
-
       <div class="legal-block">
         <h3>2. Confidentiality</h3>
         <p>All problems submitted through our platform are handled with strict confidentiality.</p>
       </div>
-
       <div class="legal-block">
         <h3>3. User Consent</h3>
         <p>By using our services or submitting a problem, you consent to communication via email, phone, or WhatsApp.</p>
       </div>
-
       <div class="legal-block">
         <h3>4. Liability Disclaimer</h3>
         <p>We provide consulting and coordination, but are not liable for third-party service providers or outcomes.</p>
       </div>
-
       <div class="legal-block">
         <h3>5. Contact</h3>
         <p>For questions about our terms or privacy policy, email us at: support@smartaccounting.in</p>
@@ -55,13 +60,13 @@
 
   <script src="script.js" defer></script>
   <!-- AOS JS -->
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>
-  AOS.init({
-    duration: 700,
-    offset: 100,
-    once: true,
-  });
-</script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 700,
+      offset: 100,
+      once: true,
+    });
+  </script>
 </body>
 </html>
