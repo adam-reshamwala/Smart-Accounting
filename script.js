@@ -86,3 +86,30 @@ window.addEventListener("scroll", () => {
   const nav = document.getElementById("navLinks");
   nav.classList.remove("show");
 });
+
+//Open Enquiry modal 
+function openEnquiryModal(serviceName = "") {
+  document.getElementById("enquiryDetails").value = `I'm interested in ${serviceName}.`;
+  document.getElementById("enquiryModal").style.display = "flex";
+}
+
+function closeEnquiryModal() {
+  document.getElementById("enquiryModal").style.display = "none";
+}
+
+// Handle form submit
+document.getElementById("enquiryForm").addEventListener("submit", function (e) {
+  e.preventDefault();
+
+  const name = document.getElementById("enquiryName").value.trim();
+  const business = document.getElementById("enquiryBusiness").value.trim();
+  const message = document.getElementById("enquiryDetails").value.trim();
+
+  const whatsappMessage = `Name: ${name}\nBusiness: ${business}\nEnquiry: ${message}`;
+  const phone = "918839824832"; // Your WhatsApp number
+
+  const url = `https://wa.me/${phone}?text=${encodeURIComponent(whatsappMessage)}`;
+  window.open(url, "_blank");
+
+  closeEnquiryModal();
+});
